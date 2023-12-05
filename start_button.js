@@ -35,6 +35,7 @@ async function startChat() {
             console.log('data: ' + data);
             if (data)
                 alert('categories: ' + data);
+                
         }
     });
 
