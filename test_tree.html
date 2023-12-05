@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,5 +11,44 @@
 <svg id="graph" width="1000" height="800"></svg>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate My Recipe</title>
+  <style>
+    /* Style for the text box */
+    .textbox-container {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      padding: 20px;
+    }
+
+    /* Additional styles for the text box */
+    .textbox {
+      width: 500px;
+      height: 600px;
+      padding: 15px;
+      font-size: 18px;
+      border: 3px solid #555;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <svg id="graph" width="1000" height="800"></svg>
+
+  <!-- Text box container -->
+  <div class="textbox-container">
+    <input type="text" class="textbox" placeholder="Enter text">
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

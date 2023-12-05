@@ -131,3 +131,19 @@ function clicked(event, d) {
 
     console.log("Clicked Nodes:", clickedNodes);
 }
+
+
+// Append a submit button below the graph
+const submitButton = d3.select("body")
+  .append("button")
+  .text("Submit")
+  .style("margin-top", "20px")
+  .style("margin-right", "440px") // Adjusting the right margin to move the button to the left
+  .on("click", handleSubmit); // Call handleSubmit function on button click
+
+function handleSubmit() {
+  // Add your logic here for handling the submit action
+  // For example, you can retrieve values from the text box or perform an action
+  console.log("Submit button clicked!");
+}
+
