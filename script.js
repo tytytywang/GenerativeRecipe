@@ -155,6 +155,9 @@ function handleSubmit() {
     });
   console.log("newJson!!!!!!!:" + JSON.stringify(newJson));
   const newJsonString = JSON.stringify(jsonData);
+    var spinner = new Spin.Spinner({
+        color: '#c25823',
+    }).spin(document.getElementsByClassName('textbox-container').item(0));
     $.ajax({
         url: 'http://127.0.0.1:8088/GetParticularRecipeCategories',
         type: 'POST',
@@ -166,6 +169,7 @@ function handleSubmit() {
                 const textarea = document.getElementById('recipeTextarea');
                 const recipeText = data;
                 textarea.value = recipeText;
+                spinner.stop();
             }
         }
     });
@@ -175,6 +179,12 @@ async function startChat() {
     // Get the user input
     const userInput = document.getElementById('textInput').value;
     console.log('@@@@@@@userInput:' + userInput);
+
+    //progress bar
+    var spinner = new Spin.Spinner({
+        color: '#c25823',
+    }).spin(document.getElementsByClassName('container').item(0));
+
     $.ajax({
         url: 'http://127.0.0.1:8088/GetRecipeCategories',
         type: 'POST',
@@ -189,6 +199,7 @@ async function startChat() {
                 localStorage.setItem('userInput', userInput);
                 // window.open('test_tree.html', "_blank");
                 window.location.href = 'test_tree.html';
+                spinner.stop();
         }
     });
 }
