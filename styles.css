@@ -16,6 +16,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+button {
+    background-color: #f9b588;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #dc6a30;
+}
 
   
 h1 {

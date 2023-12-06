@@ -4,12 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generate My Recipe</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <style>
+    /* Style for the text box */
+    .textbox-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Additional styles for the text box */
+    .textbox {
+      width: 450px;
+      height: 600px;
+      padding: 15px;
+      font-size: 18px;
+      border: 3px solid #555;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .graph-area {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 800px;
+      height: 700px;
+      padding: 20px;
+      border: 3px solid #555;
+      border-radius: 10px;
+    }
+
+    button {
+      border: 3px solid #555;
+      padding: 10px;
+      background-color: #f9b588;
+      cursor: pointer;
+      width: 300px;
+      height: 80px;
+      font-size: larger;
+      transition: background-color 0.3s;
+      border-radius: 10px;
+    }
+
+    button:hover {
+      background-color: #dc6a30;
+    }
+
   </style>
 </head>
 <body>
-<svg id="graph" width="1000" height="800"></svg>
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="script.js"></script>
+<div class="graph-area">
+  <svg id="graph" width="800" height="700"></svg>
+</div>
+
+  <!-- Text box container -->
+  <div class="textbox-container">
+    <textarea class="textbox" id="recipeTextarea" placeholder="Here is the recipe"></textarea>
+    <button onclick="handleSubmit()">Generate My Recipe</button>
+  </div>
+
+
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
